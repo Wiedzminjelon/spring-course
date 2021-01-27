@@ -3,6 +3,7 @@ package spring.course;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -22,7 +23,7 @@ public class GameImpl implements Game {
     private int remainingGuesses;
     private boolean validNumberRange = true;
 
-    // == constructors ==
+//    // == constructors ==
 //    public GameImpl(NumberGenerator numberGenerator) {
 //        this.numberGenerator = numberGenerator;
 //    }
@@ -41,7 +42,7 @@ public class GameImpl implements Game {
     }
 
     @PreDestroy
-    public void preDestroy(){
+    public void preDestroy() {
         log.info("In Game preDestroy()");
     }
 
