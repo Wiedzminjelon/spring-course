@@ -1,6 +1,4 @@
-package spring.course;
-
-import org.springframework.stereotype.Component;
+package course.core;
 
 import java.util.Random;
 
