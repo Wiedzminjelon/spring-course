@@ -1,4 +1,4 @@
-package spring.course;
+package course.core;
 
 public interface NumberGenerator {
     int next();

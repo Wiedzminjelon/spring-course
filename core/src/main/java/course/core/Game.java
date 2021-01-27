@@ -1,8 +1,8 @@
-package spring.course;
+package course.core;
 
 public interface Game {
 
-    int getnumber();
+    int getNumber();
 
     int getGuess();
 

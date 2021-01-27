@@ -1,5 +1,6 @@
-package spring.course;
+package course.console;
 
+import course.core.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
