@@ -2,7 +2,7 @@ package spring.course;
 
 public interface Game {
 
-    int getnumber();
+    int getNumber();
 
     int getGuess();
 

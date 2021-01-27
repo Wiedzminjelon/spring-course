@@ -48,7 +48,7 @@ public class GameImpl implements Game {
 
     // == public methods ==
     @Override
-    public int getnumber() {
+    public int getNumber() {
         return number;
     }
 
