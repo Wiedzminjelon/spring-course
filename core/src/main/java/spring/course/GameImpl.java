@@ -23,12 +23,6 @@ public class GameImpl implements Game {
     private int remainingGuesses;
     private boolean validNumberRange = true;
 
-//    // == constructors ==
-//    public GameImpl(NumberGenerator numberGenerator) {
-//        this.numberGenerator = numberGenerator;
-//    }
-
-
     // == init ==
     @Override
     @PostConstruct
@@ -79,12 +73,12 @@ public class GameImpl implements Game {
 
     @Override
     public void check() {
-        checkValidNumberrange();
+        checkValidNumberRange();
         if (validNumberRange) {
             if (guess > number) {
                 biggest = guess - 1;
             }
-            if (guess < smallest) {
+            if (guess < number) {
                 smallest = guess + 1;
             }
         }
@@ -107,7 +101,7 @@ public class GameImpl implements Game {
     }
 
     // == private methods ==
-    private void checkValidNumberrange() {
+    private void checkValidNumberRange() {
         validNumberRange = (guess >= smallest) && (guess <= biggest);
     }
 }
