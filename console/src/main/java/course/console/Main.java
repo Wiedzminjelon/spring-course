@@ -1,7 +1,6 @@
 package course.console;
 
-import course.core.*;
-import course.core.config.AppConfig;
+import course.core.config.GameConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -14,19 +13,7 @@ public class Main {
     public static void main(String[] args) {
         log.info("Guess The Number game");
 
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-
-        NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
-
-        int number = numberGenerator.next();
-
-        log.info("number = {}", number);
-
-        Game game = context.getBean(Game.class);
-
-        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
-        log.info(messageGenerator.getMainMessage());
-        log.info(messageGenerator.getResultMessage());
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(GameConfig.class);
 
         context.close();
     }
