@@ -1,6 +1,6 @@
 package course.core;
 
-import course.core.annotations.Guesscount;
+import course.core.annotations.GuessCount;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class GameImpl implements Game {
     private NumberGenerator numberGenerator;
 
     @Autowired
-    @Guesscount
+    @GuessCount
     private int guessCount;
 
     private int number;
@@ -31,7 +31,7 @@ public class GameImpl implements Game {
     @Override
     @PostConstruct
     public void reset() {
-        smallest = 0;
+        smallest = numberGenerator.getMinNumber();
         guess = 0;
         remainingGuesses = guessCount;
         biggest = numberGenerator.getMaxNumber();
